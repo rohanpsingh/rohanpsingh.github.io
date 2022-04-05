@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <!-- Borrowed the template from url=(0040)http://people.eecs.berkeley.edu/~pathak/ -->
-<html class="gr__people_eecs_berkeley_edu"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<html class="gr__people_eecs_berkeley_edu">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
   <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
   <style type="text/css">
   /* Design Credits: Jon Barron and Abhishek Kar and Saurabh Gupta */
@@ -45,8 +46,13 @@
   }
   </style>
 
-<!--   <link rel="icon" type="image/png" href="http://people.eecs.berkeley.edu/~pathak/images/seal_icon.png"> -->
-  <script async="" src="./assets/js/analytics.js"></script><script type="text/javascript" src="./assets/js/hidebib.js"></script>
+  <link rel="stylesheet"
+	href="./assets/highlight/styles/default.min.css">
+  <script src="./assets/highlight/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <script async="" src="./assets/js/analytics.js"></script>
+
   <title>Rohan P. Singh</title>
   <meta name="Rohan's Homepage" http-equiv="Content-Type" content="Rohan&#39;s Homepage">
   <link href="./assets/css/css" rel="stylesheet" type="text/css">
@@ -60,8 +66,6 @@
     ga('send', 'pageview');
   </script>
   <!-- End : Google Analytics Code -->
-  <!-- Scramble Script by Jeff Donahue -->
-  <script src="./assets/js/scramble.js"></script>
 </head>
 
 <body data-gr-c-s-loaded="true">
@@ -248,7 +252,7 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
   <tbody><tr><td><sectionheading>&nbsp;&nbsp;Projects</sectionheading></td></tr>
   </tbody></table>
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
   <tbody>
 
   <tr>
@@ -270,9 +274,42 @@
     <ul><li>
     <p>
       <a href="https://github.com/isri-aist/jvrc_mj_description">
-      <heading>MuJoCo XML for JVRC1</heading></a><br>
+      <heading>MuJoCo XML for JVRC1</heading></a> /
+      <a href="https://github.com/rohanpsingh/mujoco-python-viewer">
+      <heading>mujoco-python-viewer</heading></a><br>
       <strong>Open-source model files for the JVRC1 Humanoid Robot.</strong><br>
-      <em>This is a much more realistic humanoid robot model than the one provided in OpenAI Gym.</em>
+      <em>This is a more realistic humanoid robot model than the one in OpenAI Gym.</em><br>
+
+
+      <a href="#/" onclick="showHideButton()">Show more...</a>
+
+      <div id="mujoco-instructions" style="display:none">
+	Install MuJoCo viewer, clone Git repository:
+	<pre><code class="language-shell">
+	$ pip install mujoco-python-viewer
+	$ git clone https://github.com/isri-aist/jvrc_mj_description
+	</code></pre>
+	Then, in Python:
+	<pre><code class="language-python">
+	import mujoco
+	import mujoco_viewer
+
+	model = mujoco.MjModel.from_xml_path('xml/jvrc1.xml')
+	data = mujoco.MjData(model)
+
+	# create the viewer object
+	viewer = mujoco_viewer.MujocoViewer(model, data)
+
+	# simulate and render
+	for _ in range(100000):
+	    mujoco.mj_step(model, data)
+	    viewer.render()
+
+	# close
+	viewer.close()
+	</code></pre>
+      </div>
+
     </p>
     </li></ul>
     </td>
@@ -398,6 +435,17 @@ hideblock('compgan18_abs');
 </script>
 <script xml:space="preserve" language="JavaScript">
 hideblock('icml19_abs');
+</script>
+
+<script>
+  function showHideButton() {
+  var x = document.getElementById("mujoco-instructions");
+  if (x.style.display === "none") {
+  x.style.display = "block";
+  } else {
+  x.style.display = "none";
+  }
+  }
 </script>
 
 
