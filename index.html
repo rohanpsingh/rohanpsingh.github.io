@@ -50,6 +50,36 @@
     width: 600px;
     overflow-x: auto;
   }
+
+  /* General styles for news container */
+  .news-container {
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .news-date {
+    width: 20%;
+    text-align: center;
+    vertical-align: top;
+  }
+  .news-description {
+    width: 80%;
+    vertical-align: top;
+  }
+
+  /* General styles for default container */
+  .default-logo {
+    width: 33%;
+    text-align: center;
+    vertical-align: top;
+  }
+  .default-description {
+    width: 67%;
+    vertical-align: top;
+  }
+
   </style>
 
   <link rel="stylesheet"
@@ -189,79 +219,73 @@
 </div>
 </center>
 
-<br><br><br>
-
-<!-- ======= Talks ======= -->
+<!-- ======= News ======= -->
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tbody><tr><td><sectionheading>&nbsp;&nbsp;Talks</sectionheading></td></tr>
-  </tbody></table>
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-
   <tbody>
-  <tr>
-    <td width="33%" valign="top" align="center">
-      27 November, 2024
-    </td>
-    <td width="67%" valign="top">
-    <p>
-      Visited the <a href="https://dls.iit.it/">Dynamic Legged Systems (DLS)</a> lab at IIT Genoa, Italy
-      and talked about my postdoc research on multi-contact methods,
-      and sim-to-real methods for humanoid robots.
-    </p>
-    </td>
-  </tr>
+    <tr>
+      <td>
+        <sectionheading>&nbsp;&nbsp;News</sectionheading>
+      </td>
+    </tr>
   </tbody>
-
-  <tbody>
-  <tr>
-    <td width="33%" valign="top" align="center">
-      25 November, 2024
-    </td>
-    <td width="67%" valign="top">
-    <p>
-      Visited the <a href="https://crl.ethz.ch/">Computational Robotics Lab (CRL)</a> lab at ETH Zurich,
-      Switzerland and talked about my past research on bipedal
-      locomotion using reinforcement learning.
-    </p>
-    </td>
-  </tr>
-  </tbody>
-
-  <tbody>
-  <tr>
-    <td width="33%" valign="top" align="center">
-      5 March, 2024
-    </td>
-    <td width="67%" valign="top">
-    <p>
-      Talk at the <a href="https://gepettoweb.laas.fr/index.php/Home">Gepetto group</a>, LAAS-CNRS, France (remote)
-    </p>
-    </td>
-  </tr>
-  </tbody>
-
-  <tbody>
-  <tr>
-    <td width="33%" valign="top" align="center">
-      5 October, 2023
-    </td>
-    <td width="67%" valign="top">
-    <p>
-      Visited and talked about my research at the humanoids team in
-      Toyota Motor Corporation, Future Creation Center, Suidobashi,
-      Tokyo
-    </p>
-    </td>
-  </tr>
-  </tbody>
-
-  <!-- <tbody> -->
-  <!--   <tr> -->
-  <!--     <em></em><br> -->
-  <!--   </tr> -->
-  <!-- </tbody> -->
-
 </table>
+
+<div class="news-container">
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+
+    <tbody>
+      <tr>
+	<td class="news-date">27 Nov, 2024</td>
+	<td class="news-description">
+	  <p>
+	    Visited the <a href="https://dls.iit.it/">Dynamic Legged Systems (DLS)</a> lab at IIT Genoa, Italy
+	    and talked about my postdoc research on multi-contact methods,
+	    and sim-to-real methods for humanoid robots.
+	  </p>
+	</td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+	<td class="news-date">25 Nov, 2024</td>
+	<td class="news-description">
+	  <p>
+	    Visited the <a href="https://crl.ethz.ch/">Computational Robotics Lab (CRL)</a> lab at ETH Zurich,
+	    Switzerland and talked about my past research on bipedal
+	    locomotion using reinforcement learning.
+	  </p>
+	</td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+	<td class="news-date">5 Mar, 2024</td>
+	<td class="news-description">
+	  <p>
+	    Talk at the <a href="https://gepettoweb.laas.fr/index.php/Home">Gepetto group</a>, LAAS-CNRS, France (remote)
+	  </p>
+	</td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+	<td class="news-date">5 Oct, 2023</td>
+	<td class="news-description">
+	  <p>
+	    Visited and talked about my research at the humanoids team in
+	    Toyota Motor Corporation, Future Creation Center, Suidobashi,
+	    Tokyo
+	  </p>
+	</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<br>
 
 <!-- ======= Publications ======= -->
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
@@ -271,11 +295,11 @@
   <tbody>
 
   <tr>
-    <td width="33%" valign="top" align="center">
+    <td class="default-logo">
     <a href="https://arxiv.org/abs/2303.03724"><img src="https://img.youtube.com/vi/IeUaSsBRbNY/0.jpg" alt="paper_image" width="100%" style="border-radius:15px"></a>
-
     </td>
-    <td width="67%" valign="top">
+
+    <td class="default-description">
     <p>
       <a href="https://arxiv.org/abs/2303.03724">
       <heading>Learning bipedal walking for humanoids with current feedback</a><br>
@@ -286,10 +310,10 @@
   </tr>
 
   <tr>
-    <td width="33%" valign="top" align="center">
+    <td class="default-logo">
     <a href="https://arxiv.org/abs/2209.00274"><img src="https://img.youtube.com/vi/7GmmAW5C20o/0.jpg" alt="paper_image" width="100%" style="border-radius:15px"></a>
     </td>
-    <td width="67%" valign="top">
+    <td class="default-description">
     <p>
       <a href="https://arxiv.org/abs/2209.00274">
       <heading>mc-mujoco: Simulating Articulated Robots with FSM Controllers in MuJoCo</a><br>
@@ -300,10 +324,10 @@
   </tr>
 
   <tr>
-    <td width="33%" valign="top" align="center">
+    <td class="default-logo">
     <a href="https://arxiv.org/abs/2207.12644"><img src="https://img.youtube.com/vi/Gkxxmy_ncIo/0.jpg" alt="paper_image" width="100%" style="border-radius:15px"></a>
     </td>
-    <td width="67%" valign="top">
+    <td class="default-description">
     <p>
       <a href="https://arxiv.org/abs/2207.12644">
       <heading>Learning Bipedal Walking On Planned Footsteps For Humanoid Robots</a><br>
@@ -314,10 +338,10 @@
   </tr>
 
   <tr>
-    <td width="33%" valign="top" align="center">
+    <td class="default-logo">
     <a href="https://arxiv.org/abs/2011.03790"><img src="./assets/img/icra2021_paper.png" alt="paper_image" width="100%" style="border-radius:15px"></a>
     </td>
-    <td width="67%" valign="top">
+    <td class="default-description">
     <p>
       <a href="https://arxiv.org/abs/2011.03790">
       <heading>Rapid Pose Label Generation through Sparse Representation of Unknown Objects</a><br>
@@ -328,10 +352,10 @@
   </tr>
       
   <tr>
-    <td width="33%" valign="top" align="center">
+    <td class="default-logo">
     <a href="https://ieeexplore.ieee.org/abstract/document/9026239/"><img src="./assets/img/sii2020_paper.png" alt="paper_image" width="100%" style="border-radius:15px"></a>
     </td>
-    <td width="67%" valign="top">
+    <td class="default-description">
       <p>
 	<a href="https://ieeexplore.ieee.org/abstract/document/9026239/">
 	  <heading>Instance-specific 6-dof object pose estimation from minimal annotations</a><br>
@@ -342,10 +366,10 @@
   </tr>
 
   <tr>
-    <td width="33%" valign="top" align="center">
+    <td class="default-logo">
     <a href="https://www.jstage.jst.go.jp/article/jsmermd/2020/0/2020_2P2-J05/_article/-char/ja/"><img src="./assets/img/robomech2020_paper.png" alt="paper_image" width="100%" style="border-radius:15px"></a>
     </td>
-    <td width="67%" valign="top">
+    <td class="default-description">
       <p>
         <a href="https://www.jstage.jst.go.jp/article/jsmermd/2020/0/2020_2P2-J05/_article/-char/ja/">
         <heading>Easy Pose Annotation of Real RGB-D Data for Known Objects</heading></a><br>
@@ -356,10 +380,10 @@
   </tr>
 
   <tr>
-    <td width="33%" valign="top" align="center">
+    <td class="default-logo">
     <a href="https://ieeexplore.ieee.org/abstract/document/9190664"><img src="./assets/img/icip2020_paper.png" alt="paper_image" width="100%" style="border-radius:15px"></a>
     </td>
-    <td width="67%" valign="top">
+    <td class="default-description">
       <p>
         <a href="https://ieeexplore.ieee.org/abstract/document/9190664">
         <heading>APE: A More Practical Approach To 6-Dof Pose Estimation</heading></a><br>
@@ -385,7 +409,7 @@
   <tbody>
 
   <tr>
-    <td width="67%" valign="top">
+    <td class="default-description">
     <ul><li>
     <p>
       <a href="https://github.com/rohanpsingh/LearningHumanoidWalking">
@@ -398,7 +422,7 @@
   </tr>
 
   <tr>
-    <td width="67%" valign="top">
+    <td class="default-description">
     <ul><li>
     <p>
       <a href="https://github.com/rohanpsingh/mc_mujoco">
@@ -412,7 +436,7 @@
   </tr>
       
   <tr>
-    <td width="67%" valign="top">
+    <td class="default-description">
     <ul><li>
     <p>
       <a href="https://github.com/isri-aist/jvrc_mj_description">
@@ -458,7 +482,7 @@
   </tr>
 
   <tr>
-    <td width="67%" valign="top">
+    <td class="default-description">
     <ul><li>
     <p>
       <a href="https://unit.aist.go.jp/jrl-2/en/projects/project-janus.html">
@@ -473,7 +497,7 @@
   </tr>
 
   <tr>
-    <td width="67%" valign="top">
+    <td class="default-description">
     <ul><li>
     <p>
       <a href="https://github.com/rohanpsingh/RapidPoseLabels">
@@ -486,7 +510,7 @@
   </tr>
 
   <tr>
-    <td width="67%" valign="top">
+    <td class="default-description">
     <ul><li>
     <p>
       <a href="https://github.com/rohanpsingh/ObjectKeypointTrainer">
